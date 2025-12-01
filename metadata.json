@@ -1,0 +1,5 @@
+{
+  "name": "Trình tạo ma trận đề thi Đa môn THCS",
+  "description": "Một ứng dụng giúp giáo viên tạo ma trận, đặc tả, đề thi và đáp án cho môn Khoa học Tự nhiên theo chương trình giáo dục phổ thông 2018 của Việt Nam.",
+  "requestFramePermissions": []
+}
