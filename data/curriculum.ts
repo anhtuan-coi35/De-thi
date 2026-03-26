@@ -260,102 +260,141 @@ export const CURRICULUM_DATA: { [key in Subject]?: { [key in TextbookSeries]?: {
       '6': {
         name: "Khoa học tự nhiên 6 - Chân trời sáng tạo",
         topics: [
-          { name: "Mở đầu", lessons: [
-            { name: "Giới thiệu về khoa học tự nhiên" },
-            { name: "An toàn trong phòng thực hành" }
+          { name: "PHẦN MỞ ĐẦU", lessons: [
+            { name: "Bài 1: Giới thiệu về khoa học tự nhiên" },
+            { name: "Bài 2: Các lĩnh vực chủ yếu của khoa học tự nhiên" },
+            { name: "Bài 3: Quy định an toàn trong phòng thực hành. Giới thiệu một số dụng cụ đo - Sử dụng kính lúp và kính hiển vi quang học" }
           ]},
-          { name: "Chủ đề 1: Các phép đo", lessons: [
-            { name: "Đo chiều dài, khối lượng và thời gian" },
-            { name: "Đo nhiệt độ" }
+          { name: "CHỦ ĐỀ 1: CÁC PHÉP ĐO", lessons: [
+            { name: "Bài 4: Đo chiều dài" },
+            { name: "Bài 5: Đo khối lượng" },
+            { name: "Bài 6: Đo thời gian" },
+            { name: "Bài 7: Thang nhiệt độ Celsius. Đo nhiệt độ" }
           ]},
-          { name: "Chủ đề 2: Các thể của chất", lessons: [
-            { name: "Sự đa dạng và các thể cơ bản của chất" }
+          { name: "CHỦ ĐỀ 2: CÁC THỂ CỦA CHẤT", lessons: [
+            { name: "Bài 8: Sự đa dạng và các thể cơ bản của chất. Tính chất của chất" }
           ]},
-          { name: "Chủ đề 3: Oxygen và không khí", lessons: [
-            { name: "Oxygen và không khí" }
+          { name: "CHỦ ĐỀ 3: OXYGEN VÀ KHÔNG KHÍ", lessons: [
+            { name: "Bài 9: Oxygen" },
+            { name: "Bài 10: Không khí và bảo vệ môi trường không khí" }
           ]},
-          { name: "Chủ đề 4: Một số vật liệu, nhiên liệu, nguyên liệu", lessons: [
-            { name: "Một số vật liệu, nhiên liệu, nguyên liệu thông dụng" },
-            { name: "Một số lương thực – thực phẩm" }
+          { name: "CHỦ ĐỀ 4: MỘT SỐ VẬT LIỆU, NHIÊN LIỆU, NGUYÊN LIỆU, LƯƠNG THỰC - THỰC PHẨM THÔNG DỤNG; TÍNH CHẤT VÀ ỨNG DỤNG CỦA CHÚNG", lessons: [
+            { name: "Bài 11: Một số vật liệu thông dụng" },
+            { name: "Bài 12: Nhiên liệu và an ninh năng lượng" },
+            { name: "Bài 13: Một số nguyên liệu" },
+            { name: "Bài 14: Một số lương thực, thực phẩm" }
           ]},
-          { name: "Chủ đề 5: Chất tinh khiết – Hỗn hợp", lessons: [
-            { name: "Chất tinh khiết – Hỗn hợp" },
-            { name: "Tách chất ra khỏi hỗn hợp" }
+          { name: "CHỦ ĐỀ 5: CHẤT TINH KHIẾT - HỖN HỢP. PHƯƠNG PHÁP TÁCH CHẤT", lessons: [
+            { name: "Bài 15: Chất tinh khiết - Hỗn hợp" },
+            { name: "Bài 16: Một số phương pháp tách chất ra khỏi hỗn hợp" }
           ]},
-          { name: "Chủ đề 6: Tế bào – Đơn vị cơ sở của sự sống", lessons: [
-            { name: "Tế bào - Đơn vị cơ sở của sự sống" }
+          { name: "CHỦ ĐỀ 6: TẾ BÀO - ĐƠN VỊ CƠ SỞ CỦA SỰ SỐNG", lessons: [
+            { name: "Bài 17: Tế bào" },
+            { name: "Bài 18: Thực hành quan sát tế bào sinh vật" }
           ]},
-          { name: "Chủ đề 7: Từ tế bào đến cơ thể", lessons: [
-            { name: "Cơ thể đơn bào và cơ thể đa bào" },
-            { name: "Các cấp độ tổ chức trong cơ thể đa bào" }
+          { name: "CHỦ ĐỀ 7: TỪ TẾ BÀO ĐẾN CƠ THỂ", lessons: [
+            { name: "Bài 19: Cơ thể đơn bào và cơ thể đa bào" },
+            { name: "Bài 20: Các cấp độ tổ chức trong cơ thể đa bào" },
+            { name: "Bài 21: Thực hành quan sát sinh vật" }
           ]},
-          { name: "Chủ đề 8: Đa dạng thế giới sống", lessons: [
-            { name: "Phân loại thế giới sống" },
-            { name: "Virus và vi khuẩn" },
-            { name: "Nguyên sinh vật và Nấm" },
-            { name: "Thực vật và Động vật" },
-            { name: "Đa dạng sinh học" }
+          { name: "CHỦ ĐỀ 8: ĐA DẠNG THẾ GIỚI SỐNG", lessons: [
+            { name: "Bài 22: Phân loại thế giới sống" },
+            { name: "Bài 23: Thực hành xây dựng khóa lưỡng phân" },
+            { name: "Bài 24: Virus" },
+            { name: "Bài 25: Vi khuẩn" },
+            { name: "Bài 26: Thực hành quan sát vi khuẩn" },
+            { name: "Bài 27: Nguyên sinh vật" },
+            { name: "Bài 28: Nấm" },
+            { name: "Bài 29: Thực vật" },
+            { name: "Bài 30: Thực hành phân loại thực vật" },
+            { name: "Bài 31: Động vật" },
+            { name: "Bài 32: Thực hành quan sát và phân loại động vật ngoài thiên nhiên" },
+            { name: "Bài 33: Đa dạng sinh học" },
+            { name: "Bài 34: Tìm hiểu sinh vật ngoài thiên nhiên" }
           ]},
-          { name: "Chủ đề 9: Lực", lessons: [
-            { name: "Lực và tác dụng của lực" },
-            { name: "Lực hấp dẫn và lực ma sát" }
+          { name: "CHỦ ĐỀ 9: LỰC", lessons: [
+            { name: "Bài 35: Lực và biểu diễn lực" },
+            { name: "Bài 36: Tác dụng của lực" },
+            { name: "Bài 37: Lực hấp dẫn và trọng lượng" },
+            { name: "Bài 38: Lực tiếp xúc và lực không tiếp xúc" },
+            { name: "Bài 39: Biến dạng của lò xo. Phép đo lực" },
+            { name: "Bài 40: Lực ma sát" }
           ]},
-          { name: "Chủ đề 10: Năng lượng", lessons: [
-            { name: "Năng lượng và sự truyền năng lượng" },
-            { name: "Bảo toàn năng lượng và sử dụng năng lượng" }
+          { name: "CHỦ ĐỀ 10: NĂNG LƯỢNG VÀ CUỘC SỐNG", lessons: [
+            { name: "Bài 41: Năng lượng" },
+            { name: "Bài 42: Bảo toàn năng lượng và sử dụng năng lương" }
           ]},
-          { name: "Chủ đề 11: Trái Đất và bầu trời", lessons: [
-            { name: "Chuyển động nhìn thấy của Mặt Trời, Mặt Trăng" },
-            { name: "Hệ Mặt Trời và Ngân Hà" }
+          { name: "CHỦ ĐỀ 11: TRÁI ĐẤT VÀ BẦU TRỜI", lessons: [
+            { name: "Bài 43: Chuyển động nhìn thấy của Mặt Trời" },
+            { name: "Bài 44: Chuyển động nhìn thấy của Mặt Trăng" },
+            { name: "Bài 45: Hệ Mặt Trời và Ngân Hà" }
           ]}
         ]
       },
       '7': {
         name: "Khoa học tự nhiên 7 - Chân trời sáng tạo",
         topics: [
-            { name: "Chủ đề 1: Nguyên tử, nguyên tố hóa học, bảng tuần hoàn", lessons: [
-                { name: "Nguyên tử" },
-                { name: "Nguyên tố hóa học" },
-                { name: "Sơ lược bảng tuần hoàn" }
-            ]},
-            { name: "Chủ đề 2: Phân tử", lessons: [
-                { name: "Phân tử - Đơn chất - Hợp chất" },
-                { name: "Hóa trị và công thức hóa học" }
-            ]},
-            { name: "Chủ đề 3: Tốc độ", lessons: [
-                { name: "Tốc độ chuyển động" },
-                { name: "Đồ thị quãng đường - thời gian" }
-            ]},
-            { name: "Chủ đề 4: Âm thanh", lessons: [
-                { name: "Mô tả sóng âm" },
-                { name: "Độ to và độ cao của âm" }
-            ]},
-            { name: "Chủ đề 5: Ánh sáng", lessons: [
-                { name: "Ánh sáng, tia sáng" },
-                { name: "Sự phản xạ ánh sáng" }
-            ]},
-            { name: "Chủ đề 6: Từ", lessons: [
-                { name: "Nam châm" },
-                { name: "Từ trường và la bàn" },
-                { name: "Nam châm điện" }
-            ]},
-            { name: "Chủ đề 7: Trao đổi chất và năng lượng ở sinh vật", lessons: [
-                { name: "Vai trò của trao đổi chất" },
-                { name: "Quang hợp và hô hấp tế bào" },
-                { name: "Trao đổi khí và dinh dưỡng ở sinh vật" }
-            ]},
-            { name: "Chủ đề 8: Cảm ứng và tập tính", lessons: [
-                { name: "Cảm ứng ở sinh vật" },
-                { name: "Tập tính ở động vật" }
-            ]},
-            { name: "Chủ đề 9: Sinh trưởng và phát triển", lessons: [
-                { name: "Sinh trưởng và phát triển ở sinh vật" },
-                { name: "Các nhân tố ảnh hưởng" }
-            ]},
-            { name: "Chủ đề 10: Sinh sản ở sinh vật", lessons: [
-                { name: "Sinh sản ở sinh vật" },
-                { name: "Các yếu tố ảnh hưởng đến sinh sản" }
-            ]}
+          { name: "Mở đầu", lessons: [{ name: "Bài 1: Phương pháp và kĩ năng học tập môn Khoa học tự nhiên" }] },
+          { name: "Chủ đề 1. Nguyên tử - Nguyên tố hóa học - Sơ lược về bảng tuần hoàn các nguyên tố hóa học", lessons: [
+            { name: "Bài 2. Nguyên tử" },
+            { name: "Bài 3. Nguyên tố hóa học" },
+            { name: "Bài 4. Sơ lược bảng tuần hoàn các nguyên tố hóa học" }
+          ]},
+          { name: "Chủ đề 2. Phân tử", lessons: [
+            { name: "Bài 5. Phân tử - Đơn chất - Hợp chất" },
+            { name: "Bài 6. Giới thiệu về liên kết hóa học" },
+            { name: "Bài 7. Hóa trị và công thức hóa học" }
+          ]},
+          { name: "Chủ đề 3. Tốc độ", lessons: [
+            { name: "Bài 8. Tốc độ chuyển động" },
+            { name: "Bài 9. Đồ thị quãng đường - thời gian" },
+            { name: "Bài 10. Đo tốc độ" },
+            { name: "Bài 11. Tốc độ và an toàn giao thông" }
+          ]},
+          { name: "Chủ đề 4. Âm thanh", lessons: [
+            { name: "Bài 12. Mô tả sóng âm" },
+            { name: "Bài 13. Độ to và độ cao của âm" },
+            { name: "Bài 14. Phản xạ âm" }
+          ]},
+          { name: "Chủ đề 5. Ánh sáng", lessons: [
+            { name: "Bài 15. Ánh sáng, tia sáng" },
+            { name: "Bài 16. Sự phản xạ ánh sáng" },
+            { name: "Bài 17. Ảnh của vật tạo bởi gương phẳng" }
+          ]},
+          { name: "Chủ đề 6. Từ", lessons: [
+            { name: "Bài 18. Nam châm" },
+            { name: "Bài 19. Từ trường" },
+            { name: "Bài 20. Từ trường Trái Đất - Sử dụng la bàn" },
+            { name: "Bài 21. Nam châm điện" }
+          ]},
+          { name: "Chủ đề 7. Trao đổi chất và năng lượng ở sinh vật", lessons: [
+            { name: "Bài 22. Vai trò của trao đổi chất và chuyển hóa năng lượng ở sinh vật" },
+            { name: "Bài 23. Quang hợp ở thực vật" },
+            { name: "Bài 24. Thực hành: Chứng minh quang hợp ở cây xanh" },
+            { name: "Bài 25. Hô hấp tế bào" },
+            { name: "Bài 26. Thực hành về hô hấp tế bào ở thực vật thông qua sự nảy mầm của hạt" },
+            { name: "Bài 27. Trao đổi khí ở sinh vật" },
+            { name: "Bài 28. Vai trò của nước và các dinh dưỡng đối với cơ thể sinh vật" },
+            { name: "Bài 29. Trao đổi nước và các dinh dưỡng ở thực vật" },
+            { name: "Bài 30. Trao đổi nước và các chất dinh dưỡng ở động vật" },
+            { name: "Bài 31. Thực hành chứng minh thân vận chuyển nước và lá thoát hơi nước" }
+          ]},
+          { name: "Chủ đề 8. Cảm ứng ở sinh vật và tập tính ở động vật", lessons: [
+            { name: "Bài 32. Cảm ứng ở sinh vật" },
+            { name: "Bài 33. Tập tính của động vật" }
+          ]},
+          { name: "Chủ đề 9. Sinh trưởng và phát triển ở sinh vật", lessons: [
+            { name: "Bài 34. Sinh trưởng và phát triển ở sinh vật" },
+            { name: "Bài 35. Các nhân tố ảnh hưởng đến sinh trưởng và phát triển ở sinh vật" },
+            { name: "Bài 36. Thực hành chứng minh sinh trưởng và phát triển ở thực vật, động vật" }
+          ]},
+          { name: "Chủ đề 10. Sinh sản ở sinh vật", lessons: [
+            { name: "Bài 37. Sinh sản ở sinh vật" },
+            { name: "Bài 38. Các yếu tố ảnh hưởng đến sinh sản và điều hoà, điều khiển sinh sản ở sinh vật" }
+          ]},
+          { name: "Chủ đề 11. Cơ thể sinh vật là một thể thống nhất", lessons: [
+            { name: "Bài 39. Chứng minh cơ thể sinh vật là một thể thống nhất" }
+          ]}
         ]
       },
       '8': {
@@ -441,45 +480,45 @@ export const CURRICULUM_DATA: { [key in Subject]?: { [key in TextbookSeries]?: {
               { name: "Bài 19. Sự khác nhau cơ bản giữa phi kim và kim loại" }
           ]},
           { name: "Chủ đề 7. Hợp chất hữu cơ. Hydrocarbon và nguồn nhiên liệu", lessons: [
-              { name: "Bài 20. Giới thiệu về hợp chất hữu cơ" },
-              { name: "Bài 21. Alkane" },
-              { name: "Bài 22. Alkene" },
-              { name: "Bài 23. Nguồn nhiên liệu" }
+            { name: "Bài 20. Giới thiệu về hợp chất hữu cơ" },
+            { name: "Bài 21. Alkane" },
+            { name: "Bài 22. Alkene" },
+            { name: "Bài 23. Nguồn nhiên liệu" }
           ]},
           { name: "Chủ đề 8. Ethylic alcohol. Acetic acid", lessons: [
-              { name: "Bài 24. Ethylic alcohol" },
-              { name: "Bài 25. Acetic acid" }
+            { name: "Bài 24. Ethylic alcohol" },
+            { name: "Bài 25. Acetic acid" }
           ]},
           { name: "Chủ đề 9. Lipid - Carbohydrate - Protein. Polymer", lessons: [
-              { name: "Bài 26. Lipid và chất béo" },
-              { name: "Bài 27. Glucose và saccharose" },
-              { name: "Bài 28. Tinh bột và cellulose" },
-              { name: "Bài 29. Protein" },
-              { name: "Bài 30. Polymer" }
+            { name: "Bài 26. Lipid và chất béo" },
+            { name: "Bài 27. Glucose và saccharose" },
+            { name: "Bài 28. Tinh bột và cellulose" },
+            { name: "Bài 29. Protein" },
+            { name: "Bài 30. Polymer" }
           ]},
           { name: "Chủ đề 10. Khai thác tài nguyên từ vỏ Trái Đất", lessons: [
-              { name: "Bài 31. Sơ lược về hoá học vỏ Trái Đất và khai thác tài nguyên từ vỏ Trái Đất" },
-              { name: "Bài 32. Khai thác đá vôi. Công nghiệp silicate" },
-              { name: "Bài 33. Khai thác nhiên liệu hóa thạch" },
-              { name: "Bài 34. Nguồn carbon. Chu trình carbon và sự ấm lên toàn cầu" }
+            { name: "Bài 31. Sơ lược về hoá học vỏ Trái Đất và khai thác tài nguyên từ vỏ Trái Đất" },
+            { name: "Bài 32. Khai thác đá vôi. Công nghiệp silicate" },
+            { name: "Bài 33. Khai thác nhiên liệu hóa thạch" },
+            { name: "Bài 34. Nguồn carbon. Chu trình carbon và sự ấm lên toàn cầu" }
           ]},
           { name: "Chủ đề 11. Di truyền", lessons: [
-              { name: "Bài 35. Khái quát về di truyền học" },
-              { name: "Bài 36. Các quy luật di truyền của Menđel" },
-              { name: "Bài 37. Nucleic acid và ứng dụng" },
-              { name: "Bài 38. Đột biến gene" },
-              { name: "Bài 39. Quá trình tái bản, phiên mã và dịch mã" },
-              { name: "Bài 40. Từ gene đến tính trạng" },
-              { name: "Bài 41. Cấu trúc nhiễm sắc thể và đột biến nhiễm sắc thể" },
-              { name: "Bài 42. Thực hành: Quan sát tiêu bản nhiễm sắc thể" },
-              { name: "Bài 43. Di truyền nhiễm sắc thể" },
-              { name: "Bài 44. Di truyền học với con người" },
-              { name: "Bài 45. Ứng dụng công nghệ di truyền vào đời sống" }
+            { name: "Bài 35. Khái quát về di truyền học" },
+            { name: "Bài 36. Các quy luật di truyền của Menđel" },
+            { name: "Bài 37. Nucleic acid và ứng dụng" },
+            { name: "Bài 38. Đột biến gene" },
+            { name: "Bài 39. Quá trình tái bản, phiên mã và dịch mã" },
+            { name: "Bài 40. Từ gene đến tính trạng" },
+            { name: "Bài 41. Cấu trúc nhiễm sắc thể và đột biến nhiễm sắc thể" },
+            { name: "Bài 42. Thực hành: Quan sát tiêu bản nhiễm sắc thể" },
+            { name: "Bài 43. Di truyền nhiễm sắc thể" },
+            { name: "Bài 44. Di truyền học with con người" },
+            { name: "Bài 45. Ứng dụng công nghệ di truyền vào đời sống" }
           ]},
           { name: "Chủ đề 12. Tiến hóa", lessons: [
-              { name: "Bài 46. Khái niệm tiến hóa và các hình thức chọn lọc" },
-              { name: "Bài 47. Cơ chế tiến hóa" },
-              { name: "Bài 48. Sự phát sinh và phát triển của sự sống trên Trái Đất" }
+            { name: "Bài 46. Khái niệm tiến hóa và các hình thức chọn lọc" },
+            { name: "Bài 47. Cơ chế tiến hóa" },
+            { name: "Bài 48. Sự phát sinh và phát triển của sự sống trên Trái Đất" }
           ]}
         ]
       }
