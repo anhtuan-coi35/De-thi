@@ -1,4 +1,3 @@
-
 import React, { useState, useMemo } from 'react';
 import { MatrixTopic, SpecificationTopic, TestPaper, Subject, TextbookSeries, Question, QuestionType, CognitiveLevel, Answer } from '../types';
 import { COGNITIVE_LEVELS, QUESTION_TYPES, SUBJECTS, TEXTBOOK_SERIES } from '../constants';
@@ -179,13 +178,15 @@ const SummaryDisplay: React.FC<SummaryDisplayProps> = ({ matrix, specification, 
     };
 
     return (
-        <div className="container mx-auto p-6 bg-white rounded-lg shadow-xl">
+        <div className="container mx-auto p-6 bg-white rounded-lg shadow-lg border border-slate-100">
              <div className="flex justify-between items-center mb-6 no-print">
-                <h2 className="text-2xl font-bold text-gray-700">Bước 6: Tổng kết & Tải về</h2>
+                <h2 className="text-2xl font-bold text-indigo-800 flex items-center">
+                    <i className="fas fa-file-export mr-3"></i>Bước 6: Tổng kết & Tải về
+                </h2>
                 <button 
                     onClick={handleDownload} 
                     disabled={isDownloading}
-                    className="bg-green-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-green-700 transition-colors disabled:bg-gray-400 disabled:cursor-not-allowed flex items-center"
+                    className="bg-emerald-600 text-white font-bold py-2 px-6 rounded-lg hover:bg-emerald-700 transition-all shadow-md hover:shadow-lg disabled:bg-slate-300 disabled:cursor-not-allowed flex items-center transform hover:-translate-y-0.5"
                 >
                     <i className={`fas ${isDownloading ? 'fa-spinner fa-spin' : 'fa-file-word'} mr-2`}></i>
                     {isDownloading ? 'Đang tạo file...' : 'Tải xuống Tất cả (.docx)'}
@@ -194,36 +195,36 @@ const SummaryDisplay: React.FC<SummaryDisplayProps> = ({ matrix, specification, 
 
             <div className="space-y-4">
                 {matrix.length > 0 && (
-                     <details className="bg-gray-50 rounded-lg p-4" open>
-                        <summary className="font-semibold text-lg cursor-pointer text-gray-800">Ma trận Đề thi</summary>
+                     <details className="bg-slate-50 rounded-lg p-4 border border-slate-200 shadow-sm" open>
+                        <summary className="font-bold text-lg cursor-pointer text-indigo-800">1. Ma trận Đề thi</summary>
                         <div className="mt-4"><MatrixReadOnly matrix={matrix} selectedSubject={selectedSubject} /></div>
                     </details>
                 )}
                 {specification.length > 0 && (
-                     <details className="bg-gray-50 rounded-lg p-4">
-                        <summary className="font-semibold text-lg cursor-pointer text-gray-800">Bản Đặc tả</summary>
+                     <details className="bg-slate-50 rounded-lg p-4 border border-slate-200 shadow-sm">
+                        <summary className="font-bold text-lg cursor-pointer text-indigo-800">2. Bản Đặc tả</summary>
                         <div className="mt-4"><SpecificationReadOnly specification={specification} matrix={matrix} questions={testPaper.questions} /></div>
                     </details>
                 )}
                 {testPaper && (
-                     <details className="bg-gray-50 rounded-lg p-4">
-                        <summary className="font-semibold text-lg cursor-pointer text-gray-800">Đề thi</summary>
+                     <details className="bg-slate-50 rounded-lg p-4 border border-slate-200 shadow-sm">
+                        <summary className="font-bold text-lg cursor-pointer text-indigo-800">3. Đề thi</summary>
                         <div className="mt-4">
                           <TestPaperDisplay {...{...testPaper, selectedSubject, selectedGrade, selectedSeries, showWrapper: false}} />
                         </div>
                     </details>
                 )}
                 {testPaper && (
-                     <details className="bg-gray-50 rounded-lg p-4">
-                        <summary className="font-semibold text-lg cursor-pointer text-gray-800">Hướng dẫn chấm</summary>
+                     <details className="bg-slate-50 rounded-lg p-4 border border-slate-200 shadow-sm">
+                        <summary className="font-bold text-lg cursor-pointer text-indigo-800">4. Hướng dẫn chấm</summary>
                         <div className="mt-4">
                           <AnswerKeyDisplay {...{...testPaper, selectedSubject, selectedGrade, selectedSeries, onGenerateReview: ()=>{}, isLoading: false, showWrapper: false}} />
                           </div>
                     </details>
                 )}
                 {reviewContent && (
-                     <details className="bg-gray-50 rounded-lg p-4">
-                        <summary className="font-semibold text-lg cursor-pointer text-gray-800">Nội dung ôn tập</summary>
+                     <details className="bg-slate-50 rounded-lg p-4 border border-slate-200 shadow-sm">
+                        <summary className="font-bold text-lg cursor-pointer text-indigo-800">5. Nội dung ôn tập</summary>
                         <div className="mt-4">
                           <ReviewContentDisplay content={reviewContent} {...{selectedSubject, selectedGrade, selectedSeries, onGoToSummary: ()=>{}, showWrapper: false}} />
                         </div>

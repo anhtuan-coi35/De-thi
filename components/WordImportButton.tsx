@@ -292,7 +292,7 @@ const WordImportButton: React.FC<WordImportButtonProps> = ({ onMatrixImport, set
       <button
         type="button"
         onClick={handleClick}
-        className="bg-gray-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-gray-700 transition-colors flex items-center no-print"
+        className="bg-slate-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-slate-600 transition-colors flex items-center shadow-md no-print"
       >
         <i className="fas fa-file-upload mr-2"></i> Tải Ma Trận
       </button>

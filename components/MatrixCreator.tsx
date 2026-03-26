@@ -1,4 +1,3 @@
-
 import React, { useState, useMemo, useEffect, useRef } from 'react';
 import { MatrixTopic, MatrixContentUnit, QuestionType, CognitiveLevel, TextbookSeries, Subject } from '../types';
 import { COGNITIVE_LEVELS, QUESTION_TYPES, TEXTBOOK_SERIES, SUBJECTS } from '../constants';
@@ -112,8 +111,8 @@ const MatrixCreator: React.FC<MatrixCreatorProps> = ({ matrix, setMatrix, onSubm
     }
   }
 
-  const handleMatrixImport = ({ matrix: newMatrix, subject: detectedSubject, grade: detectedGrade, series: detectedSeries, changes, unmatched }: { 
-    matrix: MatrixTopic[]; 
+  const handleMatrixImport = ({ reconciledMatrix: newMatrix, subject: detectedSubject, grade: detectedGrade, series: detectedSeries, changes, unmatched }: { 
+    reconciledMatrix: MatrixTopic[]; 
     subject: Subject | null;
     grade: '6' | '7' | '8' | '9' | null;
     series: TextbookSeries | null;
@@ -275,22 +274,24 @@ const MatrixCreator: React.FC<MatrixCreatorProps> = ({ matrix, setMatrix, onSubm
   };
 
   return (
-    <div className="container mx-auto p-4 bg-white rounded-lg shadow-xl">
-      <h2 className="text-2xl font-bold text-gray-700 mb-6">Bước 1: Tạo Ma Trận Đề Thi</h2>
+    <div className="container mx-auto p-6 bg-white rounded-lg shadow-lg border border-slate-100">
+      <h2 className="text-2xl font-bold text-indigo-800 mb-6 flex items-center">
+        <i className="fas fa-edit mr-3"></i>Bước 1: Tạo Ma Trận Đề Thi
+      </h2>
       
-      <div className="mb-6 p-4 border rounded-lg bg-gray-50 flex flex-col md:flex-row gap-6">
+      <div className="mb-8 p-6 bg-slate-50 rounded-xl border border-slate-200 grid grid-cols-1 md:grid-cols-3 gap-8">
         <div>
-            <h3 className="text-lg font-semibold text-gray-700 mb-3">Chọn môn học</h3>
+            <h3 className="text-sm font-bold text-slate-500 uppercase tracking-wider mb-3">Chọn môn học</h3>
             <div className="flex flex-wrap gap-2">
               {SUBJECTS.map(subject => (
                 <button
                   key={subject.key}
                   type="button"
                   onClick={() => handleSubjectChange(subject.key)}
-                  className={`px-4 py-2 rounded-lg font-bold transition-colors text-sm sm:text-base ${
+                  className={`px-3 py-2 rounded-md font-medium transition-all text-sm border shadow-sm ${
                     selectedSubject === subject.key
-                      ? 'bg-red-600 text-white shadow-md'
-                      : 'bg-white text-red-600 border border-red-600 hover:bg-red-100'
+                      ? 'bg-indigo-600 text-white border-indigo-600'
+                      : 'bg-white text-slate-700 border-slate-300 hover:border-indigo-400 hover:text-indigo-600'
                   }`}
                 >
                   {subject.name}
@@ -299,17 +300,17 @@ const MatrixCreator: React.FC<MatrixCreatorProps> = ({ matrix, setMatrix, onSubm
             </div>
          </div>
          <div>
-            <h3 className="text-lg font-semibold text-gray-700 mb-3">Chọn khối lớp</h3>
+            <h3 className="text-sm font-bold text-slate-500 uppercase tracking-wider mb-3">Chọn khối lớp</h3>
             <div className="flex flex-wrap gap-2">
               {(['6', '7', '8', '9'] as const).map(grade => (
                 <button
                   key={grade}
                   type="button"
                   onClick={() => handleGradeChange(grade)}
-                  className={`px-4 py-2 rounded-lg font-bold transition-colors text-sm sm:text-base ${
+                  className={`px-4 py-2 rounded-md font-medium transition-all text-sm border shadow-sm ${
                     selectedGrade === grade
-                      ? 'bg-blue-600 text-white shadow-md'
-                      : 'bg-white text-blue-600 border border-blue-600 hover:bg-blue-100'
+                      ? 'bg-indigo-600 text-white border-indigo-600'
+                      : 'bg-white text-slate-700 border-slate-300 hover:border-indigo-400 hover:text-indigo-600'
                   }`}
                 >
                   Lớp {grade}
@@ -318,7 +319,7 @@ const MatrixCreator: React.FC<MatrixCreatorProps> = ({ matrix, setMatrix, onSubm
             </div>
          </div>
          <div>
-            <h3 className="text-lg font-semibold text-gray-700 mb-3">Chọn bộ sách</h3>
+            <h3 className="text-sm font-bold text-slate-500 uppercase tracking-wider mb-3">Chọn bộ sách</h3>
             <div className="flex flex-wrap gap-2">
                 {TEXTBOOK_SERIES.map(series => (
                      <button
@@ -326,10 +327,10 @@ const MatrixCreator: React.FC<MatrixCreatorProps> = ({ matrix, setMatrix, onSubm
                         type="button"
                         onClick={() => handleSeriesChange(series.key)}
                         disabled={!CURRICULUM_DATA[selectedSubject]?.[series.key]?.[selectedGrade]}
-                        className={`px-4 py-2 rounded-lg font-bold transition-colors text-sm sm:text-base disabled:bg-gray-200 disabled:text-gray-400 disabled:border-gray-300 disabled:cursor-not-allowed ${
+                        className={`px-3 py-2 rounded-md font-medium transition-all text-sm border shadow-sm disabled:opacity-50 disabled:cursor-not-allowed disabled:bg-slate-100 disabled:border-slate-200 ${
                             selectedSeries === series.key
-                            ? 'bg-purple-600 text-white shadow-md'
-                            : 'bg-white text-purple-600 border border-purple-600 hover:bg-purple-100'
+                            ? 'bg-indigo-600 text-white border-indigo-600'
+                            : 'bg-white text-slate-700 border-slate-300 hover:border-indigo-400 hover:text-indigo-600'
                         }`}
                         title={!CURRICULUM_DATA[selectedSubject]?.[series.key]?.[selectedGrade] ? `Bộ sách này chưa có dữ liệu cho môn học và khối lớp đã chọn` : ''}
                         >
@@ -341,36 +342,36 @@ const MatrixCreator: React.FC<MatrixCreatorProps> = ({ matrix, setMatrix, onSubm
       </div>
       
       <form onSubmit={handleSubmit}>
-        <div className="overflow-x-auto" id="matrix-table-container">
-            <table className="min-w-full bg-white border text-center" id="matrix-table">
-            <thead className="bg-gray-100 font-semibold">
+        <div className="overflow-x-auto rounded-lg border border-slate-200" id="matrix-table-container">
+            <table className="min-w-full bg-white text-center text-sm" id="matrix-table">
+            <thead className="bg-slate-100 text-slate-700 font-bold">
                 <tr>
-                    <th rowSpan={3} className="py-2 px-2 border align-middle">TT</th>
-                    <th rowSpan={3} className="py-2 px-4 border align-middle">Chương/ chủ đề</th>
-                    <th rowSpan={3} className="py-2 px-4 border align-middle">Nội dung/đơn vị kiến thức</th>
-                    <th colSpan={12} className="py-2 px-4 border">Số lượng câu hỏi</th>
-                    <th colSpan={3} className="py-2 px-4 border">Tổng số câu hỏi</th>
-                    <th rowSpan={3} className="py-2 px-4 border align-middle">Tỉ lệ % điểm</th>
+                    <th rowSpan={3} className="py-3 px-2 border-b border-r border-slate-200 align-middle">TT</th>
+                    <th rowSpan={3} className="py-3 px-4 border-b border-r border-slate-200 align-middle w-48">Chương/ chủ đề</th>
+                    <th rowSpan={3} className="py-3 px-4 border-b border-r border-slate-200 align-middle w-64">Nội dung/đơn vị kiến thức</th>
+                    <th colSpan={12} className="py-2 px-4 border-b border-r border-slate-200 bg-slate-50">Số lượng câu hỏi</th>
+                    <th colSpan={3} className="py-2 px-4 border-b border-r border-slate-200 bg-slate-100">Tổng số câu hỏi</th>
+                    <th rowSpan={3} className="py-3 px-4 border-b border-slate-200 align-middle w-24">Tỉ lệ % điểm</th>
                 </tr>
                 <tr>
                     {QUESTION_TYPES.map(qType => (
-                        <th key={qType.key} colSpan={3} className="py-2 px-4 border font-medium">{qType.name}</th>
+                        <th key={qType.key} colSpan={3} className="py-1 px-2 border-b border-r border-slate-200 font-semibold text-xs uppercase text-slate-500 bg-white">{qType.name}</th>
                     ))}
                     {COGNITIVE_LEVELS.map(level => (
-                       <th key={level.key} rowSpan={2} className="py-2 px-2 border align-middle">{level.name}</th>
+                       <th key={level.key} rowSpan={2} className="py-2 px-2 border-b border-r border-slate-200 align-middle bg-slate-100">{level.name}</th>
                     ))}
                 </tr>
                 <tr>
                     {QUESTION_TYPES.map(qType => (
                         <React.Fragment key={qType.key}>
                             {COGNITIVE_LEVELS.map(level => (
-                                <th key={level.key} className="py-2 px-2 border font-medium">{level.key}</th>
+                                <th key={level.key} className="py-1 px-2 border-b border-r border-slate-200 font-medium text-xs text-slate-600">{level.key}</th>
                             ))}
                         </React.Fragment>
                     ))}
                 </tr>
             </thead>
-            <tbody>
+            <tbody className="text-slate-700">
                 {matrix.map((topic, topicIndex) => (
                     <React.Fragment key={topic.id}>
                         {topic.contentUnits.map((unit, unitIndex) => {
@@ -387,125 +388,125 @@ const MatrixCreator: React.FC<MatrixCreatorProps> = ({ matrix, setMatrix, onSubm
                             });
 
                             return (
-                                <tr key={unit.id}>
+                                <tr key={unit.id} className="hover:bg-slate-50 transition-colors">
                                     {unitIndex === 0 && (
                                         <>
-                                            <td rowSpan={topic.contentUnits.length || 1} className="py-2 px-2 border align-middle">{topicIndex + 1}</td>
-                                            <td rowSpan={topic.contentUnits.length || 1} className="py-2 px-2 border align-middle text-left font-semibold">
+                                            <td rowSpan={topic.contentUnits.length || 1} className="py-2 px-2 border-b border-r border-slate-200 align-middle bg-white">{topicIndex + 1}</td>
+                                            <td rowSpan={topic.contentUnits.length || 1} className="py-2 px-2 border-b border-r border-slate-200 align-middle text-left font-semibold bg-white text-indigo-900">
                                                 {topic.name}
                                             </td>
                                         </>
                                     )}
-                                    <td className="py-2 px-2 border align-middle text-left">
+                                    <td className="py-2 px-2 border-b border-r border-slate-200 align-middle text-left group">
                                         <div className="flex items-center justify-between">
                                           <span>{unit.name}</span>
-                                          <button type="button" onClick={() => handleRemoveContentUnit(topic.id, unit.id)} className="text-red-500 hover:text-red-700 ml-2 p-1 flex-shrink-0">
-                                            <i className="fas fa-minus-circle"></i>
+                                          <button type="button" onClick={() => handleRemoveContentUnit(topic.id, unit.id)} className="text-slate-300 hover:text-red-500 transition-colors ml-2 p-1 flex-shrink-0 opacity-0 group-hover:opacity-100">
+                                            <i className="fas fa-trash-alt"></i>
                                           </button>
                                         </div>
                                     </td>
                                     {QUESTION_TYPES.map(qType => (
                                         <React.Fragment key={qType.key}>
                                             {COGNITIVE_LEVELS.map(level => (
-                                                <td key={level.key} className="py-2 px-2 border">
-                                                    <input type="number" min="0" value={unit.questionCounts[qType.key]?.[level.key] || ''} onChange={e => handleCountChange(topic.id, unit.id, qType.key, level.key, parseInt(e.target.value, 10))} className="w-14 p-2 border rounded text-center" />
+                                                <td key={level.key} className="py-2 px-2 border-b border-r border-slate-200 p-0">
+                                                    <input type="number" min="0" value={unit.questionCounts[qType.key]?.[level.key] || ''} onChange={e => handleCountChange(topic.id, unit.id, qType.key, level.key, parseInt(e.target.value, 10))} className="w-full h-full p-2 text-center focus:outline-none focus:bg-indigo-50 text-indigo-700 font-medium" placeholder="-" />
                                                 </td>
                                             ))}
                                         </React.Fragment>
                                     ))}
-                                    <td className="py-2 px-2 border font-semibold bg-gray-50">{unitTotals.questions.B}</td>
-                                    <td className="py-2 px-2 border font-semibold bg-gray-50">{unitTotals.questions.H}</td>
-                                    <td className="py-2 px-2 border font-semibold bg-gray-50">{unitTotals.questions.VD}</td>
-                                    <td className="py-2 px-2 border font-semibold bg-gray-50">
+                                    <td className="py-2 px-2 border-b border-r border-slate-200 font-semibold bg-slate-50 text-slate-600">{unitTotals.questions.B}</td>
+                                    <td className="py-2 px-2 border-b border-r border-slate-200 font-semibold bg-slate-50 text-slate-600">{unitTotals.questions.H}</td>
+                                    <td className="py-2 px-2 border-b border-r border-slate-200 font-semibold bg-slate-50 text-slate-600">{unitTotals.questions.VD}</td>
+                                    <td className="py-2 px-2 border-b border-slate-200 font-bold bg-slate-100 text-indigo-700">
                                        {totals.grandScoreTotals.totalScore > 0 ? ((unitTotals.score / totals.grandScoreTotals.totalScore) * 100).toFixed(1) : 0}%
                                     </td>
                                 </tr>
                             )
                         })}
-                         <tr className="no-export">
-                            <td colSpan={19} className="py-2 px-4 border text-left">
+                         <tr className="no-export bg-slate-50">
+                            <td colSpan={19} className="py-3 px-4 border-b border-slate-200 text-left">
                                 <div ref={openDropdown === topic.id ? dropdownRef : null} className="relative inline-block text-left">
-                                    <button type="button" onClick={() => setOpenDropdown(openDropdown === topic.id ? null : topic.id)} className="text-blue-500 hover:text-blue-700 text-sm">
-                                        <i className="fas fa-plus mr-1"></i> Thêm nội dung
+                                    <button type="button" onClick={() => setOpenDropdown(openDropdown === topic.id ? null : topic.id)} className="text-indigo-600 hover:text-indigo-800 text-sm font-semibold flex items-center bg-white px-3 py-1 rounded border border-indigo-200 shadow-sm hover:shadow">
+                                        <i className="fas fa-plus-circle mr-2"></i> Thêm nội dung
                                     </button>
                                     {openDropdown === topic.id && (
-                                        <div className="origin-top-left absolute left-0 mt-2 w-96 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-10 max-h-60 overflow-y-auto">
+                                        <div className="origin-top-left absolute left-0 mt-2 w-96 rounded-lg shadow-xl bg-white ring-1 ring-black ring-opacity-5 z-20 max-h-60 overflow-y-auto">
                                             <div className="py-1" role="menu" aria-orientation="vertical">
                                                 {getAvailableLessons(topic).length > 0 ? getAvailableLessons(topic).map(lesson => (
-                                                    <a href="#" key={lesson.name} onClick={(e) => { e.preventDefault(); handleAddContentUnit(topic.id, lesson); }} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">{lesson.name}</a>
-                                                )) : <span className="block px-4 py-2 text-sm text-gray-400">Không còn bài học để thêm</span>}
+                                                    <a href="#" key={lesson.name} onClick={(e) => { e.preventDefault(); handleAddContentUnit(topic.id, lesson); }} className="block px-4 py-3 text-sm text-slate-700 hover:bg-indigo-50 hover:text-indigo-700 border-b border-slate-100 last:border-0" role="menuitem">{lesson.name}</a>
+                                                )) : <span className="block px-4 py-3 text-sm text-slate-400 italic">Không còn bài học để thêm</span>}
                                             </div>
                                         </div>
                                     )}
                                 </div>
-                                <button type="button" onClick={() => handleRemoveTopic(topic.id)} className="text-red-500 hover:text-red-700 text-sm ml-4">
+                                <button type="button" onClick={() => handleRemoveTopic(topic.id)} className="text-red-500 hover:text-red-700 text-sm ml-6 font-medium">
                                     <i className="fas fa-trash mr-1"></i> Xóa chủ đề
                                 </button>
                             </td>
                          </tr>
                     </React.Fragment>
                 ))}
-                 <tr className="bg-gray-100 font-bold">
-                    <td colSpan={3} className="py-2 px-4 border">Tổng số câu</td>
+                 <tr className="bg-slate-100 font-bold text-slate-800 border-t-2 border-slate-300">
+                    <td colSpan={3} className="py-3 px-4 border-b border-r border-slate-300 text-right">Tổng số câu</td>
                     {QUESTION_TYPES.map(qType => (
                          <React.Fragment key={qType.key}>
                             {COGNITIVE_LEVELS.map(level => (
-                                <td key={level.key} className="py-2 px-2 border">{totals.questionCountTotals[qType.key]?.[level.key] || 0}</td>
+                                <td key={level.key} className="py-3 px-2 border-b border-r border-slate-300 bg-white">{totals.questionCountTotals[qType.key]?.[level.key] || 0}</td>
                             ))}
                         </React.Fragment>
                     ))}
-                    <td className="py-2 px-2 border">{totals.grandQuestionCountTotals.byCognitiveLevel.B}</td>
-                    <td className="py-2 px-2 border">{totals.grandQuestionCountTotals.byCognitiveLevel.H}</td>
-                    <td className="py-2 px-2 border">{totals.grandQuestionCountTotals.byCognitiveLevel.VD}</td>
-                    <td className="py-2 px-2 border">{totals.grandQuestionCountTotals.totalQuestions}</td>
+                    <td className="py-3 px-2 border-b border-r border-slate-300 bg-slate-200">{totals.grandQuestionCountTotals.byCognitiveLevel.B}</td>
+                    <td className="py-3 px-2 border-b border-r border-slate-300 bg-slate-200">{totals.grandQuestionCountTotals.byCognitiveLevel.H}</td>
+                    <td className="py-3 px-2 border-b border-r border-slate-300 bg-slate-200">{totals.grandQuestionCountTotals.byCognitiveLevel.VD}</td>
+                    <td className="py-3 px-2 border-b border-slate-300 bg-indigo-100 text-indigo-800">{totals.grandQuestionCountTotals.totalQuestions}</td>
                  </tr>
-                  <tr className="bg-gray-100 font-bold">
-                    <td colSpan={3} className="py-2 px-4 border">Tổng số điểm</td>
+                  <tr className="bg-slate-100 font-bold text-slate-800">
+                    <td colSpan={3} className="py-3 px-4 border-b border-r border-slate-300 text-right">Tổng số điểm</td>
                     {QUESTION_TYPES.map(qType => {
                         let typeTotalScore = 0;
                         COGNITIVE_LEVELS.forEach(level => typeTotalScore += totals.scoreTotals[qType.key]?.[level.key] || 0);
-                        return <td key={qType.key} colSpan={3} className="py-2 px-2 border">{typeTotalScore.toFixed(2)}</td>
+                        return <td key={qType.key} colSpan={3} className="py-3 px-2 border-b border-r border-slate-300 text-center bg-white">{typeTotalScore.toFixed(2)}</td>
                     })}
-                     <td className="py-2 px-2 border">{totals.grandScoreTotals.byCognitiveLevel.B.toFixed(2)}</td>
-                    <td className="py-2 px-2 border">{totals.grandScoreTotals.byCognitiveLevel.H.toFixed(2)}</td>
-                    <td className="py-2 px-2 border">{totals.grandScoreTotals.byCognitiveLevel.VD.toFixed(2)}</td>
-                    <td className="py-2 px-2 border">{totals.grandScoreTotals.totalScore.toFixed(2)}</td>
+                     <td className="py-3 px-2 border-b border-r border-slate-300 bg-slate-200">{totals.grandScoreTotals.byCognitiveLevel.B.toFixed(2)}</td>
+                    <td className="py-3 px-2 border-b border-r border-slate-300 bg-slate-200">{totals.grandScoreTotals.byCognitiveLevel.H.toFixed(2)}</td>
+                    <td className="py-3 px-2 border-b border-r border-slate-300 bg-slate-200">{totals.grandScoreTotals.byCognitiveLevel.VD.toFixed(2)}</td>
+                    <td className="py-3 px-2 border-b border-slate-300 bg-indigo-100 text-indigo-800">{totals.grandScoreTotals.totalScore.toFixed(2)}</td>
                   </tr>
-                  <tr className="bg-gray-100 font-bold">
-                    <td colSpan={3} className="py-2 px-4 border">Tỉ lệ %</td>
+                  <tr className="bg-slate-800 text-white font-bold">
+                    <td colSpan={3} className="py-3 px-4 border-r border-slate-600 text-right">Tỉ lệ %</td>
                      {QUESTION_TYPES.map(qType => {
                         let typeTotalScore = 0;
                         COGNITIVE_LEVELS.forEach(level => typeTotalScore += totals.scoreTotals[qType.key]?.[level.key] || 0);
                         const percentage = totals.grandScoreTotals.totalScore > 0 ? (typeTotalScore / totals.grandScoreTotals.totalScore) * 100 : 0;
-                        return <td key={qType.key} colSpan={3} className="py-2 px-2 border">{percentage.toFixed(0)}%</td>
+                        return <td key={qType.key} colSpan={3} className="py-3 px-2 border-r border-slate-600 text-center">{percentage.toFixed(0)}%</td>
                     })}
                     {COGNITIVE_LEVELS.map(level => {
                         const percentage = totals.grandScoreTotals.totalScore > 0 ? (totals.grandScoreTotals.byCognitiveLevel[level.key] / totals.grandScoreTotals.totalScore) * 100 : 0;
                         const target = TARGET_PERCENTAGES[level.key];
                         const isOffTarget = totals.grandScoreTotals.totalScore > 0 && Math.round(percentage) !== target;
                         return (
-                             <td key={level.key} className={`py-2 px-2 border ${isOffTarget ? 'text-red-600 font-black' : ''}`}>
+                             <td key={level.key} className={`py-3 px-2 border-r border-slate-600 ${isOffTarget ? 'text-yellow-400' : ''}`}>
                                 {percentage.toFixed(0)}%
                              </td>
                         )
                     })}
-                    <td className="py-2 px-2 border">100%</td>
+                    <td className="py-3 px-2">100%</td>
                   </tr>
             </tbody>
             </table>
         </div>
-        <div className="mt-6 flex justify-between items-center">
+        <div className="mt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="flex items-center gap-4">
             <div ref={openDropdown === 'add-topic' ? dropdownRef : null} className="relative inline-block text-left">
-                <button type="button" onClick={() => setOpenDropdown(openDropdown === 'add-topic' ? null : 'add-topic')} className="bg-blue-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-600 transition-colors flex items-center">
-                    <i className="fas fa-plus mr-2"></i> Thêm chủ đề
+                <button type="button" onClick={() => setOpenDropdown(openDropdown === 'add-topic' ? null : 'add-topic')} className="bg-indigo-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-indigo-600 transition-colors flex items-center shadow-md">
+                    <i className="fas fa-layer-group mr-2"></i> Thêm chủ đề
                 </button>
                 {openDropdown === 'add-topic' && (
-                    <div className="origin-top-left absolute left-0 mt-2 w-96 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-10 max-h-60 overflow-y-auto">
+                    <div className="origin-top-left absolute left-0 mt-2 w-96 rounded-lg shadow-xl bg-white ring-1 ring-black ring-opacity-5 z-20 max-h-60 overflow-y-auto">
                         <div className="py-1" role="menu" aria-orientation="vertical">
                             {availableTopics.length > 0 ? availableTopics.map(topic => (
-                                <a href="#" key={topic.name} onClick={(e) => { e.preventDefault(); handleAddTopic(topic); }} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">{topic.name}</a>
-                            )) : <span className="block px-4 py-2 text-sm text-gray-400">Không còn chủ đề để thêm</span>}
+                                <a href="#" key={topic.name} onClick={(e) => { e.preventDefault(); handleAddTopic(topic); }} className="block px-4 py-3 text-sm text-slate-700 hover:bg-indigo-50 hover:text-indigo-700 border-b border-slate-100 last:border-0" role="menuitem">{topic.name}</a>
+                            )) : <span className="block px-4 py-3 text-sm text-slate-400 italic">Không còn chủ đề để thêm</span>}
                         </div>
                     </div>
                 )}
@@ -516,7 +517,7 @@ const MatrixCreator: React.FC<MatrixCreatorProps> = ({ matrix, setMatrix, onSubm
             <button
               type="submit"
               disabled={isLoading || matrix.length === 0 || totals.grandQuestionCountTotals.totalQuestions === 0 || !currentCurriculum}
-              className="bg-green-500 text-white font-bold py-3 px-6 rounded-lg hover:bg-green-600 transition-colors disabled:bg-gray-400 disabled:cursor-not-allowed flex items-center text-lg"
+              className="bg-emerald-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-emerald-700 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 disabled:bg-slate-300 disabled:cursor-not-allowed disabled:shadow-none disabled:transform-none flex items-center text-lg"
               title={!currentCurriculum ? 'Vui lòng chọn môn học, khối lớp và bộ sách hợp lệ' : ''}
             >
               {isLoading ? 'Đang xử lý...' : 'Tạo Đặc Tả'} <i className="fas fa-arrow-right ml-2"></i>

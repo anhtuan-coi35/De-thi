@@ -266,14 +266,14 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="bg-gray-100 min-h-screen font-sans">
+    <div className="bg-slate-50 min-h-screen font-sans flex flex-col text-slate-800">
       {isLoading && <Loader message="AI đang xử lý yêu cầu..." />}
       <Header />
-      <main className="container mx-auto p-4">
+      <main className="container mx-auto p-4 flex-grow">
         <StepIndicator currentStep={currentStep} onStepClick={handleStepClick} maxStep={maxStep} />
         {error && (
-          <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-4" role="alert">
-            <strong className="font-bold">Lỗi!</strong>
+          <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg relative mb-4 shadow-sm" role="alert">
+            <strong className="font-bold mr-1">Lỗi!</strong>
             <span className="block sm:inline"> {error}</span>
             <button onClick={() => setError(null)} className="absolute top-0 bottom-0 right-0 px-4 py-3">
               <i className="fas fa-times"></i>
@@ -284,6 +284,17 @@ const App: React.FC = () => {
           {renderCurrentStep()}
         </div>
       </main>
+      
+      <footer className="bg-white border-t border-slate-200 mt-8 py-8 print:hidden">
+        <div className="container mx-auto px-4 text-center">
+            <p className="text-slate-800 font-bold text-lg mb-2">
+                &copy; 2025 - Phát triển bởi: Quách Anh Tuấn
+            </p>
+            <p className="text-slate-600">
+                Giáo viên trường THCS Yên Quang, xã Nho Quan, tỉnh Ninh Bình.
+            </p>
+        </div>
+      </footer>
     </div>
   );
 };
