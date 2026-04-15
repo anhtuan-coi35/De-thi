@@ -194,33 +194,7 @@ export const CURRICULUM_DATA: { [key in Subject]?: { [key in TextbookSeries]?: {
           ]},
           { name: "Chủ đề 2: Ánh sáng", lessons: [
               { name: "Sự khúc xạ ánh sáng và phản xạ toàn phần" },
-              { name: "Hiện tượng tán sắc ánh sáng. Màu sắc ánh sáng" },
-              { name: "Sự khúc xạ ánh sáng qua thấu kính" },
-              { name: "Sự tạo ảnh qua thấu kính. Kính lúp" }
-          ]},
-          { name: "Chủ đề 3: Điện", lessons: [
-              { name: "Định luật Ohm. Điện trở" },
-              { name: "Đoạn mạch nối tiếp và song song" },
-              { name: "Năng lượng của dòng điện và công suất điện" }
-          ]},
-          { name: "Chủ đề 4: Điện từ", lessons: [
-              { name: "Cảm ứng điện từ. Nguyên tắc tạo ra dòng điện xoay chiều" },
-              { name: "Tác dụng của dòng điện xoay chiều" }
-          ]},
-          { name: "Chủ đề 5: Năng lượng với cuộc sống", lessons: [
-              { name: "Sử dụng năng lượng" },
-              { name: "Năng lượng tái tạo" }
-          ]},
-          { name: "Chủ đề 6: Kim loại", lessons: [
-              { name: "Tính chất chung của kim loại" },
-              { name: "Dãy hoạt động hóa học" },
-              { name: "Tách kim loại. Sử dụng hợp kim" },
-              { name: "Sự khác nhau cơ bản giữa phi kim và kim loại" }
-          ]},
-          { name: "Chủ đề 7: Giới thiệu về chất hữu cơ, hydrocarbon và nguồn nhiên liệu", lessons: [
-              { name: "Giới thiệu về chất hữu cơ" },
-              { name: "Hydrocarbon, alkane và alkene" },
-              { name: "Nguồn nhiên liệu" }
+              { name: "Hiện tượng tán sắc ánh sáng. Màu sắc của vật" }
           ]},
           { name: "Chủ đề 8: Ethylic alcohol và acetic acid", lessons: [
               { name: "Ethylic alcohol" },
@@ -256,35 +230,11 @@ export const CURRICULUM_DATA: { [key in Subject]?: { [key in TextbookSeries]?: {
         ]
       }
     },
-    'chan_troi_sang_tao': {
+    'Chân trời sáng tạo': {
       '6': {
         name: "Khoa học tự nhiên 6 - Chân trời sáng tạo",
         topics: [
-          { name: "PHẦN MỞ ĐẦU", lessons: [
-            { name: "Bài 1: Giới thiệu về khoa học tự nhiên" },
-            { name: "Bài 2: Các lĩnh vực chủ yếu của khoa học tự nhiên" },
-            { name: "Bài 3: Quy định an toàn trong phòng thực hành. Giới thiệu một số dụng cụ đo - Sử dụng kính lúp và kính hiển vi quang học" }
-          ]},
-          { name: "CHỦ ĐỀ 1: CÁC PHÉP ĐO", lessons: [
-            { name: "Bài 4: Đo chiều dài" },
-            { name: "Bài 5: Đo khối lượng" },
-            { name: "Bài 6: Đo thời gian" },
-            { name: "Bài 7: Thang nhiệt độ Celsius. Đo nhiệt độ" }
-          ]},
-          { name: "CHỦ ĐỀ 2: CÁC THỂ CỦA CHẤT", lessons: [
-            { name: "Bài 8: Sự đa dạng và các thể cơ bản của chất. Tính chất của chất" }
-          ]},
-          { name: "CHỦ ĐỀ 3: OXYGEN VÀ KHÔNG KHÍ", lessons: [
-            { name: "Bài 9: Oxygen" },
-            { name: "Bài 10: Không khí và bảo vệ môi trường không khí" }
-          ]},
-          { name: "CHỦ ĐỀ 4: MỘT SỐ VẬT LIỆU, NHIÊN LIỆU, NGUYÊN LIỆU, LƯƠNG THỰC - THỰC PHẨM THÔNG DỤNG; TÍNH CHẤT VÀ ỨNG DỤNG CỦA CHÚNG", lessons: [
-            { name: "Bài 11: Một số vật liệu thông dụng" },
-            { name: "Bài 12: Nhiên liệu và an ninh năng lượng" },
-            { name: "Bài 13: Một số nguyên liệu" },
-            { name: "Bài 14: Một số lương thực, thực phẩm" }
-          ]},
-          { name: "CHỦ ĐỀ 5: CHẤT TINH KHIẾT - HỖN HỢP. PHƯƠNG PHÁP TÁCH CHẤT", lessons: [
+          { name: "CHỦ ĐỀ 5: CHẤT TINH KHIẾT - HỖN HỢP. PHƯƠNG PHÁP TÁCH CÁC CHẤT", lessons: [
             { name: "Bài 15: Chất tinh khiết - Hỗn hợp" },
             { name: "Bài 16: Một số phương pháp tách chất ra khỏi hỗn hợp" }
           ]},
@@ -596,7 +546,7 @@ export const CURRICULUM_DATA: { [key in Subject]?: { [key in TextbookSeries]?: {
           { name: "Chương V. Ánh sáng", lessons: [
             { name: "Bài 15. Năng lượng ánh sáng. Tia sáng, vùng tối" },
             { name: "Bài 16. Sự phản xạ ánh sáng" },
-            { name: "Bài 17. Ảnh của vật qua gương phẳng" }
+            { name: "Bài 17. Cách dựng ảnh của một vật qua gương phẳng" }
           ]},
           { name: "Chương VI. Từ", lessons: [
             { name: "Bài 18. Nam châm" },
@@ -609,13 +559,13 @@ export const CURRICULUM_DATA: { [key in Subject]?: { [key in TextbookSeries]?: {
             { name: "Bài 23. Một số yếu tố ảnh hưởng đến quang hợp" },
             { name: "Bài 24. Thực hành: Chứng minh quang hợp ở cây xanh" },
             { name: "Bài 25. Hô hấp tế bào" },
-            { name: "Bài 26. Một số yếu tố ảnh hưởng hô hấp tế bào" },
-            { name: "Bài 27. Thực hành: Hô hấp tế bào ở thực vật" },
+            { name: "Bài 26. Một số yếu tố ảnh hưởng đến hô hấp tế bào" },
+            { name: "Bài 27. Thực hành: Chứng minh thân cây vận chuyển nước và lá thoát hơi nước" },
             { name: "Bài 28. Trao đổi khí ở sinh vật" },
-            { name: "Bài 29. Vai trò của nước và các chất dinh dưỡng đối với cơ thể sinh vật" },
+            { name: "Bài 29. Vai trò của nước và các chất dinh dưỡng đối với sinh vật" },
             { name: "Bài 30. Trao đổi nước và chất dinh dưỡng ở thực vật" },
             { name: "Bài 31. Trao đổi nước và chất dinh dưỡng ở động vật" },
-            { name: "Bài 32. Thực hành: Thân vận chuyển nước và lá thoát hơi nước" }
+            { name: "Bài 32. Thực hành: Chứng minh thân cây vận chuyển nước và lá thoát hơi nước" }
           ]},
           { name: "Chương VIII. Cảm ứng ở sinh vật", lessons: [
             { name: "Bài 33. Cảm ứng ở sinh vật và tập tính ở động vật" },
@@ -683,16 +633,16 @@ export const CURRICULUM_DATA: { [key in Subject]?: { [key in TextbookSeries]?: {
             { name: "Bài 30. Khái quát về cơ thể người" },
             { name: "Bài 31. Hệ vận động ở người" },
             { name: "Bài 32. Dinh dưỡng và tiêu hóa ở người" },
-            { name: "Bài 33. Máu và hệ tuần hoàn của cơ thể người" },
+            { name: "Bài 33. Máu và hệ tuần hoàn ở người" },
             { name: "Bài 34. Hệ hô hấp ở người" },
             { name: "Bài 35. Hệ bài tiết ở người" },
-            { name: "Bài 36. Điều hòa môi trường trong của cơ thể người" },
+            { name: "Bài 36. Điều hòa môi trường trong cơ thể người" },
             { name: "Bài 37. Hệ thần kinh và các giác quan ở người" },
             { name: "Bài 38. Hệ nội tiết ở người" },
             { name: "Bài 39. Da và điều hòa thân nhiệt ở người" },
             { name: "Bài 40. Sinh sản ở người" }
           ]},
-          { name: "Chương 8. Sinh vật và môi trường", lessons: [
+          { name: "Chương VIII. Sinh vật và môi trường", lessons: [
             { name: "Bài 41. Môi trường và các nhân tố sinh thái" },
             { name: "Bài 42. Quần thể sinh vật" },
             { name: "Bài 43. Quần xã sinh vật" },
@@ -706,87 +656,78 @@ export const CURRICULUM_DATA: { [key in Subject]?: { [key in TextbookSeries]?: {
       '9': {
         name: "Khoa học tự nhiên 9 - Kết nối tri thức",
         topics: [
-          { name: "Mở đầu", lessons: [{ name: "Bài 1: Nhận biết một số dụng cụ, hoá chất. Thuyết trình một vấn đề khoa học" }] },
-          { name: "Chương 1. Năng lượng cơ học", lessons: [
-            { name: "Bài 2. Động năng. Thế năng" },
-            { name: "Bài 3. Cơ năng" },
-            { name: "Bài 4. Công và công suất" }
+          { name: "Chương I. Năng lượng cơ năng", lessons: [
+            { name: "Bài 1. Công và công suất" },
+            { name: "Bài 2. Cơ năng" }
           ]},
-          { name: "Chương 2. Ánh sáng", lessons: [
-            { name: "Bài 5. Khúc xạ ánh sáng" },
-            { name: "Bài 6. Phản xạ toàn phần" },
-            { name: "Bài 7. Lăng kính" },
-            { name: "Bài 8. Thấu kính" },
-            { name: "Bài 9. Thực hành đo tiêu cự của thấu kính hội tụ" },
-            { name: "Bài 10. Kính lúp. Bài tập thấu kính" }
+          { name: "Chương II. Ánh sáng", lessons: [
+            { name: "Bài 3. Khúc xạ ánh sáng" },
+            { name: "Bài 4. Phản xạ toàn phần" },
+            { name: "Bài 5. Thấu kính" },
+            { name: "Bài 6. Thực hành đo tiêu cự của thấu kính hội tụ" },
+            { name: "Bài 7. Kính lúp. Bài tập thấu kính" }
           ]},
-          { name: "Chương 3. Điện", lessons: [
-            { name: "Bài 11. Điện trở. Định luật Ohm" },
-            { name: "Bài 12. Đoạn mạch nối tiếp, song song" },
-            { name: "Bài 13. Năng lượng của dòng điện và công suất điện" }
+          { name: "Chương III. Điện", lessons: [
+            { name: "Bài 8. Điện trở. Định luật Ohm" },
+            { name: "Bài 9. Đoạn mạch nối tiếp và song song" },
+            { name: "Bài 10. Năng lượng điện. Công suất điện" },
+            { name: "Bài 11. Thực hành đo năng lượng điện và công suất điện" }
           ]},
-          { name: "Chương 4. Điện từ", lessons: [
-            { name: "Bài 14. Cảm ứng điện từ. Nguyên tắc tạo ra dòng điện xoay chiều" },
-            { name: "Bài 15. Tác dụng của dòng điện xoay chiều" }
+          { name: "Chương IV. Điện từ", lessons: [
+            { name: "Bài 12. Cảm ứng điện từ. Nguyên tắc tạo ra dòng điện xoay chiều" },
+            { name: "Bài 13. Tác dụng của dòng điện xoay chiều" }
           ]},
-          { name: "Chương 5. Năng lượng với cuộc sống", lessons: [
-            { name: "Bài 16. Vòng năng lượng trên Trái Đất. Năng lượng hóa thạch" },
-            { name: "Bài 17. Một số dạng năng lượng tái tạo" }
+          { name: "Chương V. Năng lượng với cuộc sống", lessons: [
+            { name: "Bài 14. Sử dụng năng lượng hóa thạch và năng lượng tái tạo" }
           ]},
-          { name: "Chương 6. Kim loại. Sự khác nhau cơ bản giữa phi kim và kim loại", lessons: [
-            { name: "Bài 18. Tính chất chung của kim loại" },
-            { name: "Bài 19. Dãy hoạt động hóa học" },
-            { name: "Bài 20. Tách kim loại và việc sử dụng hợp kim" },
-            { name: "Bài 21. Sự khác nhau cơ bản giữa phi kim và kim loại" }
+          { name: "Chương VI. Kim loại. Sự khác biệt giữa kim loại và phi kim", lessons: [
+            { name: "Bài 15. Tính chất chung của kim loại" },
+            { name: "Bài 16. Dãy hoạt động hóa học" },
+            { name: "Bài 17. Tách kim loại và việc sử dụng hợp kim" },
+            { name: "Bài 18. Sự ăn mòn kim loại và bảo vệ kim loại" }
           ]},
-          { name: "Chương 7. Giới thiệu hợp chất hữu cơ. Hydrocarbon và nguồn nhiên liệu", lessons: [
-            { name: "Bài 22. Giới thiệu về hợp chất hữu cơ" },
-            { name: "Bài 23. Alkane" },
-            { name: "Bài 24. Alkene" },
-            { name: "Bài 25. Nguồn nhiên liệu" }
+          { name: "Chương VII. Hợp chất hữu cơ. Hydrocarbon và nguồn nhiên liệu", lessons: [
+            { name: "Bài 19. Giới thiệu về hợp chất hữu cơ" },
+            { name: "Bài 20. Alkane" },
+            { name: "Bài 21. Alkene" },
+            { name: "Bài 22. Nguồn nhiên liệu" }
           ]},
-          { name: "Chương 8. Ethylic alcohol và Acetic acid", lessons: [
-            { name: "Bài 26. Ethylic alcohol" },
-            { name: "Bài 27. Acetic acid" }
+          { name: "Chương VIII. Ethylic alcohol và Acetic acid", lessons: [
+            { name: "Bài 23. Ethylic alcohol" },
+            { name: "Bài 24. Acetic acid" }
           ]},
-          { name: "Chương 9. Lipid. Carbohydrate. Protein. Polymer", lessons: [
-            { name: "Bài 28. Lipid" },
-            { name: "Bài 29. Carbohydrate glucose và saccharose" },
-            { name: "Bài 30. Tinh bột và cellulose" },
-            { name: "Bài 31. Protein" },
-            { name: "Bài 32. Polymer" }
+          { name: "Chương IX. Lipid. Carbohydrate. Protein. Polymer", lessons: [
+            { name: "Bài 25. Lipid và chất béo" },
+            { name: "Bài 26. Glucose và Saccharose" },
+            { name: "Bài 27. Tinh bột và Cellulose" },
+            { name: "Bài 28. Protein" },
+            { name: "Bài 29. Polymer" }
           ]},
-          { name: "Chương 10. Khai thác tài nguyên từ vỏ Trái Đất", lessons: [
-            { name: "Bài 33. Sơ lược về hóa học vỏ Trái Đất và khai thác tài nguyên từ vỏ Trái Đất" },
-            { name: "Bài 34. Khai thác đá vôi. Công nghiệp silicate" },
-            { name: "Bài 35. Khai thác nhiên liệu hóa thạch. Nguồn carbon. Chu trình carbon và sự ấm lên toàn cầu" }
+          { name: "Chương X. Khai thác tài nguyên từ vỏ Trái Đất", lessons: [
+            { name: "Bài 30. Khai thác đá vôi và đất sét" },
+            { name: "Bài 31. Khai thác nhiên liệu hóa thạch" }
           ]},
-          { name: "Chương 11. Di truyền học Menđel. Cơ sở phân tử của hiện tượng di truyền", lessons: [
-            { name: "Bài 36. Khái quát về di truyền học" },
-            { name: "Bài 37. Các quy luật di truyền của Mendel" },
-            { name: "Bài 38. Nucleic acid và gene" },
-            { name: "Bài 39. Tái bản DNA và phiên mã tạo ra RNA" },
-            { name: "Bài 40. Dịch mã và mối quan hệ từ gene đến tính trạng" },
-            { name: "Bài 41. Đột biến gene trang 178, 179, 180" }
+          { name: "Chương XI. Di truyền học Mendel. Cơ sở phân tử của hiện tượng di truyền", lessons: [
+            { name: "Bài 32. Khái niệm về gene và sự tái bản DNA" },
+            { name: "Bài 33. Phiên mã và dịch mã" },
+            { name: "Bài 34. Các quy luật di truyền của Mendel" }
           ]},
-          { name: "Chương 12. Di truyền nhiễm sắc thể", lessons: [
-            { name: "Bài 42. Di truyền nhiễm sắc thể trang 181, 182, 183" },
-            { name: "Bài 43. Nguyên phân và giảm phân trang 186, 187, 188" },
-            { name: "Bài 44. Nhiễm sắc thể giới tính và cơ chế xác định giới tính" },
-            { name: "Bài 45. Di truyền liên kết" },
-            { name: "Bài 46. Đột biến nhiễm sắc thể" }
+          { name: "Chương XII. Di truyền nhiễm sắc thể", lessons: [
+            { name: "Bài 35. Cấu trúc và chức năng của nhiễm sắc thể" },
+            { name: "Bài 36. Nguyên phân và giảm phân" },
+            { name: "Bài 37. Di truyền giới tính và cơ chế xác định giới tính" },
+            { name: "Bài 38. Đột biến nhiễm sắc thể" }
           ]},
-          { name: "Chương 13. Di truyền học with con người và đời sống", lessons: [
-            { name: "Bài 47. Di truyền học với con người" },
-            { name: "Bài 48. Ứng dụng công nghệ di truyền vào đời sống" }
+          { name: "Chương XIII. Di truyền học với con người và đời sống", lessons: [
+            { name: "Bài 39. Di truyền học với con người" },
+            { name: "Bài 40. Ứng dụng công nghệ di truyền vào đời sống" }
           ]},
-          { name: "Chương 14. Tiến hóa", lessons: [
-            { name: "Bài 49. Khái niệm tiến hóa và các hình thức chọn lọc" },
-            { name: "Bài 50. Cơ chế tiến hóa" },
-            { name: "Bài 51. Sự phát sinh và phát triển của sự sống trên Trái Đất" }
+          { name: "Chương XIV. Tiến hóa", lessons: [
+            { name: "Bài 41. Thuyết tiến hóa của Darwin" },
+            { name: "Bài 42. Thuyết tiến hóa tổng hợp hiện đại" }
           ]}
         ]
-      },
+      }
     }
   },
   'lich_su_dia_ly': {
@@ -842,83 +783,82 @@ export const CURRICULUM_DATA: { [key in Subject]?: { [key in TextbookSeries]?: {
         ]
       }
     },
+
     'ket_noi_tri_thuc': {
       '6': {
         name: "Lịch sử & Địa lí 6 - Kết nối tri thức",
         topics: [
           { name: "Bài mở đầu", lessons: [{ name: "Bài mở đầu" }] },
-          { name: "Chương 1: Bản đồ - Phương tiện thể hiện bề mặt Trái Đất", lessons: [
+          { name: "CHƯƠNG 1: BẢN ĐỒ - PHƯƠNG TIỆN THỂ HIỆN BỀ MẶT TRÁI ĐẤT", lessons: [
             { name: "Bài 1: Hệ thống kinh vĩ tuyến. Tọa độ địa lí" },
-            { name: "Bài 2: Bản đồ. Một số lưới kinh, vĩ tuyến. Phương hướng trên bản đồ" },
-            { name: "Bài 3: Tỉ lệ bản đồ. Tính khoảng cách thực tế dựa vào tỉ lệ bản đồ" },
+            { name: "Bài 2: Bản đồ. Một số lưới kinh, vĩ tuyến. Phương hướng trên bản đồ." },
+            { name: "Bài 3: Tỉ lệ bản đồ. Tính khoảng cách thực tế dựa vào tỉ lệ bản đồ." },
             { name: "Bài 4: Kí hiệu và bảng chú giải bản đồ" },
             { name: "Bài 5: Lược đồ trí nhớ" }
           ]},
-          { name: "Chương 2: Trái Đất - Hành tinh của hệ Mặt Trời", lessons: [
+          { name: "CHƯƠNG 2: TRÁI ĐẤT - HÀNH TINH CỦA HỆ MẶT TRỜI", lessons: [
             { name: "Bài 6: Trái Đất trong hệ Mặt Trời" },
             { name: "Bài 7: Chuyển động tự quay quanh trục của Trái Đất và hệ quả" },
-            { name: "Bài 8: Chuyển động của Trái Đất quanh Mặt Trời và hệ quả địa lí" },
-            { name: "Bài 9: Xác định phương hướng ngoài thực tế" }
+            { name: "Bài 8: Chuyển động của Trái Đất quanh Mặt Trời và hệ quả" },
+            { name: "Bài 9: Xác định phương hướng ngoài thực địa" }
           ]},
-          { name: "Chương 3: Cấu tạo của Trái Đất. Vỏ Trái Đất", lessons: [
-            { name: "Bài 10: Cấu tạo của Trái Đất" },
+          { name: "CHƯƠNG 3: CẤU TẠO CỦA TRÁI ĐẤT. VỎ TRÁI ĐẤT", lessons: [
+            { name: "Bài 10: Cấu tạo của Trái Đất. Các mảng kiến tạo" },
             { name: "Bài 11: Quá trình nội sinh và quá trình ngoại sinh. Hiện tượng tạo núi" },
             { name: "Bài 12: Núi lửa và động đất" },
             { name: "Bài 13: Các dạng địa hình chính trên Trái Đất. Khoáng sản" },
             { name: "Bài 14: Thực hành: Đọc lược đồ địa hình tỉ lệ lớn và lát cắt địa hình đơn giản" }
           ]},
-          { name: "Chương 4: Khí hậu và biến đổi khí hậu", lessons: [
+          { name: "CHƯƠNG 4: KHÍ HẬU VÀ BIẾN ĐỔI KHÍ HẬU", lessons: [
             { name: "Bài 15: Lớp vỏ khí của Trái Đất. Khí áp và gió" },
             { name: "Bài 16: Nhiệt độ không khí. Mây và mưa" },
-            { name: "Bài 17: Thời tiết và khí hậu. Biến đổi khí hậu" },
-            { name: "Bài 18: Thực hành: Phân tích biểu đồ nhiệt độ, lượng mưa" }
+            { name: "Bài 17: Thời tiết và khí hậu. Biến đổi khí hậu" }
           ]},
-          { name: "Chương 5: Nước trên Trái Đất", lessons: [
+          { name: "CHƯƠNG 5: NƯỚC TRÊN TRÁI ĐẤT", lessons: [
             { name: "Bài 19: Thủy quyển và vòng tuần hoàn lớn của nước" },
             { name: "Bài 20: Sông và hồ. Nước ngầm và băng hà" },
             { name: "Bài 21: Biển và đại dương" }
           ]},
-          { name: "Chương 6: Đất và sinh vật trên Trái Đất", lessons: [
+          { name: "CHƯƠNG 6: ĐẤT VÀ SINH VẬT TRÊN TRÁI ĐẤT", lessons: [
             { name: "Bài 22: Lớp đất trên Trái Đất" },
             { name: "Bài 23: Sự sống trên Trái Đất" },
             { name: "Bài 24: Rừng nhiệt đới" },
             { name: "Bài 25: Sự phân bố các đới thiên nhiên trên Trái Đất" },
             { name: "Bài 26: Thực hành: Tìm hiểu môi trường tự nhiên địa phương" }
           ]},
-          { name: "Chương 7: Con người và thiên nhiên", lessons: [
-            { name: "Bài 27: Dân số và sự phân bố dân cư trên thế giới" },
+          { name: "CHƯƠNG 7: CON NGƯỜI VÀ THIÊN NHIÊN", lessons: [
             { name: "Bài 28: Mối quan hệ giữa con người và thiên nhiên" },
             { name: "Bài 29: Bảo vệ tự nhiên và khai thác thông minh các tài nguyên thiên nhiên vì sự phát triển bền vững" },
             { name: "Bài 30: Thực hành: Tìm hiểu mối quan hệ giữa con người và thiên nhiên ở địa phương" }
           ]},
-          { name: "Chương 1: Tại sao cần học lịch sử", lessons: [
+          { name: "CHƯƠNG 1: TẠI SAO CẦN HỌC LỊCH SỬ", lessons: [
             { name: "Bài 1: Lịch sử và cuộc sống" },
-            { name: "Bài 2: Các nhà sử học dựa vào đâu để biết và phục dựng lại lịch sử" },
+            { name: "Bài 2: Dựa vào đâu để biết và phục dựng lại lịch sử?" },
             { name: "Bài 3: Thời gian trong lịch sử" }
           ]},
-          { name: "Chương 2: Xã hội nguyên thủy", lessons: [
+          { name: "CHƯƠNG 2: XÃ HỘI NGUYÊN THỦY", lessons: [
             { name: "Bài 4: Nguồn gốc loài người" },
             { name: "Bài 5: Xã hội nguyên thủy" },
-            { name: "Bài 6: Sự chuyển biến và phân hóa xã hội nguyên thủy" }
+            { name: "Bài 6: Sự biến chuyển và phân hóa của xã hội nguyên thủy" }
           ]},
-          { name: "Chương 3: Xã hội cổ đại", lessons: [
+          { name: "CHƯƠNG 3: XÃ HỘI CỔ ĐẠI", lessons: [
             { name: "Bài 7: Ai Cập và Lưỡng Hà cổ đại" },
             { name: "Bài 8: Ấn Độ cổ đại" },
             { name: "Bài 9: Trung Quốc từ thời cổ đại đến thế kỉ VII" },
             { name: "Bài 10: Hy Lạp và La Mã cổ đại" }
           ]},
-          { name: "Chương 4: Đông Nam Á từ những thế kỉ tiếp giáp Công nguyên đến thế kỉ X", lessons: [
+          { name: "CHƯƠNG 4: ĐÔNG NAM Á TỪ NHỮNG THẾ KỈ TIẾP GIÁP CÔNG NGUYÊN ĐẾN THẾ KỈ X", lessons: [
             { name: "Bài 11: Các quốc gia sơ kì ở Đông Nam Á" },
-            { name: "Bài 12: Sự hình thành và bước đầu phát triển của các vương quốc ở Đông Nam Á (Từ thế kỉ VII đến thế kỉ X)" },
-            { name: "Bài 13: Giao lưu thương mại và văn hóa ở Đông Nam Á từ đầu Công nguyên đến thế kỉ X" }
+            { name: "Bài 12: Sự hình thành và bước đầu phát triển của các vương quốc phong kiến ở Đông Nam Á (từ thế kỉ VII đến thế kỉ X)" },
+            { name: "Bài 13: Giao lưu văn hóa ở Đông Nam Á từ đầu Công nguyên đến thế kỉ X" },
+            { name: "Bài 14: Nhà nước Văn Lang - Âu Lạc" }
           ]},
-          { name: "Chương 5: Việt Nam từ khoảng thế kỉ VII trước Công nguyên đến thế kỉ X", lessons: [
-            { name: "Bài 14: Nhà nước Văn Lang, Âu Lạc" },
-            { name: "Bài 15: Chính sách cai trị của phong kiến phương Bắc và sự chuyển biến của Việt Nam thời kì Bắc thuộc" },
+          { name: "CHƯƠNG 5: VIỆT NAM TỪ KHOẢNG THẾ KỈ VII TRƯỚC CÔNG NGUYẾN ĐẾN THẾ KỈ X", lessons: [
+            { name: "Bài 15: Chính sách cai trị của các triều đại phong kiến phương Bắc và sự chuyển biến của xã hội Âu Lạc" },
             { name: "Bài 16: Các cuộc khởi nghĩa tiêu biểu giành độc lập trước thế kỉ X" },
             { name: "Bài 17: Cuộc đấu tranh bảo tồn và phát triển văn hóa dân tộc của người Việt" },
             { name: "Bài 18: Bước ngoặt lịch sử đầu thế kỉ X" },
-            { name: "Bài 19: Vương quốc Chăm-pa" },
+            { name: "Bài 19: Vương quốc Chăm-pa từ thế kỉ II đến thế kỉ X" },
             { name: "Bài 20: Vương quốc Phù Nam" }
           ]}
         ]
@@ -926,36 +866,40 @@ export const CURRICULUM_DATA: { [key in Subject]?: { [key in TextbookSeries]?: {
       '7': {
         name: "Lịch sử & Địa lí 7 - Kết nối tri thức",
         topics: [
-          { name: "Phần Lịch sử - Chương 1: Tây Âu từ thế kỉ V đến nửa đầu thế kỉ XVI", lessons: [
+          { name: "Chủ đề chung", lessons: [
+            { name: "Chủ đề chung 1. Các cuộc đại phát kiến địa lí" },
+            { name: "Chủ đề chung 2. Đô thị: Lịch sử và hiện tại" }
+          ]},
+          { name: "Phần Lịch sử - Chương 1. Tây Âu từ thế kỉ V đến nửa đầu thế kỉ XVI", lessons: [
             { name: "Bài 1. Quá trình hình thành và phát triển của chế độ phong kiến ở Tây Âu" },
             { name: "Bài 2. Các cuộc phát kiến địa lí và sự hình thành quan hệ sản xuất tư bản chủ nghĩa ở Tây Âu" },
             { name: "Bài 3. Phong trào văn hóa Phục hưng và cải cách tôn giáo" }
           ]},
-          { name: "Phần Lịch sử - Chương 2: Trung Quốc và Ấn Độ thời trung đại", lessons: [
+          { name: "Phần Lịch sử - Chương 2. Trung Quốc và Ấn Độ thời trung đại", lessons: [
             { name: "Bài 4. Trung Quốc từ thế kỉ VII đến giữa thế kỉ XIX" },
             { name: "Bài 5. Ấn Độ từ thế kỉ IV đến giữa thế kỉ XIX" }
           ]},
-          { name: "Phần Lịch sử - Chương 3: Đông Nam Á từ nửa sau thế kỉ X đến nửa đầu thế kỉ XVI", lessons: [
-            { name: "Bài 6. Các vương quốc phong kiến Đông Nam Á (từ nửa sau thế kỉ X đến nửa đầu thế kỉ XVI)" },
+          { name: "Phần Lịch sử - Chương 3. Đông Nam Á từ nửa sau thế kỉ X đến nửa đầu thế kỉ XVI", lessons: [
+            { name: "Bài 6 Các vương quốc phong kiến Đông Nam Á (từ nửa sau thế kỉ X đến nửa đầu thế kỉ XVI)" },
             { name: "Bài 7. Vương quốc Lào" },
             { name: "Bài 8. Vương quốc Cam-pu-chia" }
           ]},
-          { name: "Phần Lịch sử - Chương 4: Đất nước dưới thời các vương triều Ngô – Đinh – Tiền Lê (939 – 1009)", lessons: [
+          { name: "Phần Lịch sử - Chương 4. Đất nước dưới thời các vương triều Ngô – Đinh – Tiền Lê (939 – 1009)", lessons: [
             { name: "Bài 9. Đất nước buổi đầu độc lập (939-967)" },
             { name: "Bài 10. Đại Cồ Việt thời Đinh và Tiền Lê (968-1009)" }
           ]},
-          { name: "Phần Lịch sử - Chương 5: Đại Việt thời Lý – Trần – Hồ (1009 – 1407)", lessons: [
+          { name: "Phần Lịch sử - Chương 5. Đại Việt thời Lý – Trần – Hồ (1009 – 1407)", lessons: [
             { name: "Bài 11. Nhà Lý xây dựng và phát triển nước (1009-1225)" },
             { name: "Bài 12. Cuộc kháng chiến chống quân xâm lược Tống (1075-1077)" },
             { name: "Bài 13. Đại Việt thời Trần (1226-1400)" },
             { name: "Bài 14. Ba lần kháng chiến chống quân xâm lược Nguyên - Mông" },
             { name: "Bài 15. Nước Đại Ngu thời Hồ" }
           ]},
-          { name: "Phần Lịch sử - Chương 6: Khởi nghĩa Lam Sơn và Đại Việt thời Lê sơ (1418 – 1527)", lessons: [
+          { name: "Phần Lịch sử - Chương 6. Khởi nghĩa Lam Sơn và Đại Việt thời Lê sơ (1418 – 1527)", lessons: [
             { name: "Bài 16. Khởi nghĩa Lam Sơn" },
             { name: "Bài 17. Đại Việt thời Lê sơ (1428-1527)" }
           ]},
-          { name: "Phần Lịch sử - Chương 7: Vùng đất phía Nam Việt Nam từ đầu thế kỉ X đến đầu thế kỉ XVI", lessons: [
+          { name: "Phần Lịch sử - Chương 7. Vùng đất phía Nam Việt Nam từ đầu thế kỉ X đến đầu thế kỉ XVI", lessons: [
             { name: "Bài 18: Vương quốc Chăm – pa và vùng đất Nam Bộ từ đầu thế kỉ X đến đầu thế kỉ XVI" }
           ]},
           { name: "Phần Địa lí - Chương 1: Châu Âu", lessons: [
@@ -1074,7 +1018,7 @@ export const CURRICULUM_DATA: { [key in Subject]?: { [key in TextbookSeries]?: {
             { name: "Bài 15: Việt Nam kháng chiến chống Pháp xâm lược giai đoạn 1951-1954" },
             { name: "Bài 16: Việt Nam kháng chiến chống Mỹ, cứu nước, thống nhất đất nước giai đoạn 1954 – 1965" },
             { name: "Bài 17: Việt Nam kháng chiến chống Mỹ, cứu nước, thống nhất đất nước giai đoạn 1965 – 1975" },
-            { name: "Bài 18: Việt Nam kháng chiến chống Mỹ, cứu nước, thống nhất đất nước giai đoạn 1954 – 1965" }
+            { name: "Bài 18: Việt Nam từ năm 1975 đến năm 1991" }
           ]},
           { name: "Phần Lịch sử - Chương 5: Thế giới từ năm 1991 đến nay", lessons: [
             { name: "Bài 19: Trật tự thế giới mới từ năm 1991 đến nay. Liên Bang Nga và nước Mỹ từ năm 1991 đến nay" },
